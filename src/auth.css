@@ -1,0 +1,702 @@
+/* =========================================
+   HIREFLOW AUTHENTICATION
+========================================= */
+
+.auth-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(117, 87, 239, 0.14),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f8f7ff 0%,
+      #f3f0ff 100%
+    );
+
+  font-family: inherit;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.auth-container {
+  width: 100%;
+  max-width: 1080px;
+  min-height: 650px;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e8e5f5;
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 60px rgba(66, 45, 130, 0.1);
+}
+
+
+/* =========================================
+   LEFT BRAND SIDE
+========================================= */
+
+.auth-brand-side {
+  position: relative;
+
+  padding: 42px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.17),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 255, 255, 0.1),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #6043e8,
+      #7559f1 55%,
+      #8e74f5
+    );
+}
+
+
+/* decorative circles */
+
+.auth-brand-side::before {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  right: -100px;
+  top: -80px;
+
+  border: 45px solid rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+}
+
+
+.auth-brand-side::after {
+  content: "";
+
+  position: absolute;
+
+  width: 210px;
+  height: 210px;
+
+  left: -100px;
+  bottom: -100px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.auth-logo {
+  position: relative;
+  z-index: 2;
+}
+
+
+.auth-logo h1 {
+  margin: 0;
+
+  font-size: 31px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+
+.auth-logo p {
+  margin-top: 3px;
+
+  color: rgba(255, 255, 255, 0.76);
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   BRAND CONTENT
+========================================= */
+
+.auth-brand-content {
+  position: relative;
+  z-index: 2;
+
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+.auth-small-label {
+  display: inline-block;
+
+  margin-bottom: 17px;
+  padding: 7px 12px;
+
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+
+.auth-brand-content h2 {
+  margin: 0;
+
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.08;
+  letter-spacing: -1.6px;
+}
+
+
+.auth-brand-content > p {
+  max-width: 390px;
+
+  margin-top: 20px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   FEATURE LIST
+========================================= */
+
+.auth-feature-list {
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+
+.auth-feature-list span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+/* =========================================
+   FORM SIDE
+========================================= */
+
+.auth-form-side {
+  padding: 45px 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+}
+
+
+.auth-form {
+  width: 100%;
+  max-width: 420px;
+}
+
+
+/* =========================================
+   FORM HEADING
+========================================= */
+
+.auth-form-heading {
+  margin-bottom: 28px;
+}
+
+
+.auth-form-heading > span {
+  color: #6749ec;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+
+.auth-form-heading h2 {
+  margin: 7px 0 7px;
+
+  color: #171832;
+
+  font-size: 30px;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+}
+
+
+.auth-form-heading p {
+  margin: 0;
+
+  color: #777991;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   INPUT FIELDS
+========================================= */
+
+.auth-field {
+  margin-bottom: 17px;
+}
+
+
+.auth-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #30324e;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+.auth-field input {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 15px;
+
+  color: #242640;
+  background: #fafaff;
+
+  border: 1px solid #deddea;
+  border-radius: 10px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.auth-field input::placeholder {
+  color: #aaaabd;
+}
+
+
+.auth-field input:focus {
+  background: #ffffff;
+
+  border-color: #7557ef;
+
+  box-shadow:
+    0 0 0 3px rgba(117, 87, 239, 0.1);
+}
+
+
+/* =========================================
+   PASSWORD
+========================================= */
+
+.auth-password-field {
+  position: relative;
+}
+
+
+.auth-password-field input {
+  padding-right: 48px;
+}
+
+
+.auth-password-field button {
+  position: absolute;
+
+  top: 50%;
+  right: 13px;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #74758e;
+  background: transparent;
+
+  border: 0;
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+}
+
+
+.auth-password-field button:hover {
+  color: #6548eb;
+}
+
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.auth-error {
+  margin-bottom: 18px;
+  padding: 11px 13px;
+
+  color: #c84359;
+  background: #fff0f3;
+
+  border: 1px solid #ffd5dc;
+  border-radius: 8px;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.auth-submit-btn {
+  width: 100%;
+  height: 50px;
+
+  margin-top: 5px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6043e8,
+      #785cf2
+    );
+
+  border: 0;
+  border-radius: 10px;
+
+  box-shadow:
+    0 9px 22px rgba(103, 73, 236, 0.22);
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.auth-submit-btn:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 12px 27px rgba(103, 73, 236, 0.28);
+}
+
+
+.auth-submit-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   LOGIN / REGISTER SWITCH
+========================================= */
+
+.auth-switch {
+  margin-top: 22px;
+
+  color: #7b7d94;
+
+  text-align: center;
+
+  font-size: 12px;
+}
+
+
+.auth-switch a {
+  color: #6347e9;
+
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   LOGIN EXTRA OPTIONS
+   We'll use these on Login.jsx next
+========================================= */
+
+.auth-options {
+  margin: -2px 0 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.auth-remember {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #696b83;
+
+  font-size: 11px;
+}
+
+
+.auth-remember input {
+  accent-color: #684aec;
+}
+
+
+.auth-forgot-password {
+  padding: 0;
+
+  color: #684aec;
+  background: transparent;
+
+  border: 0;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   LOGIN PAGE
+========================================= */
+
+.auth-page.login-page .auth-container {
+  min-height: 610px;
+}
+
+
+/* =========================================
+   LOGIN FORM
+========================================= */
+
+.login-page .auth-form {
+  max-width: 420px;
+}
+
+
+.login-page .auth-form-heading {
+  margin-bottom: 30px;
+}
+
+
+.login-page .auth-form-heading h2 {
+  margin-top: 8px;
+}
+
+
+/* =========================================
+   LOGIN OPTIONS
+========================================= */
+
+.auth-options {
+  margin: 2px 0 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =========================================
+   REMEMBER ME
+========================================= */
+
+.auth-remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #686a82;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+
+.auth-remember input {
+  width: 15px;
+  height: 15px;
+
+  margin: 0;
+
+  accent-color: #684aec;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   FORGOT PASSWORD
+========================================= */
+
+.auth-forgot-password {
+  padding: 0;
+
+  color: #684aec;
+  background: transparent;
+
+  border: none;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.auth-forgot-password:hover {
+  color: #5034d6;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   LOGIN PASSWORD FIELD
+========================================= */
+
+.login-page .auth-password-field {
+  position: relative;
+}
+
+
+.login-page .auth-password-field input {
+  padding-right: 50px;
+}
+
+
+.login-page .auth-password-field button {
+  position: absolute;
+
+  top: 50%;
+  right: 12px;
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: #77798f;
+  background: transparent;
+
+  border: none;
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.login-page .auth-password-field button:hover {
+  color: #6548eb;
+  background: #f3f0ff;
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.login-page .auth-submit-btn {
+  margin-top: 0;
+}
+
+
+/* =========================================
+   CREATE ACCOUNT TEXT
+========================================= */
+
+.login-page .auth-switch {
+  margin-top: 24px;
+}
